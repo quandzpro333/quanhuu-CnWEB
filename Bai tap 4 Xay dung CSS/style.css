@@ -1,0 +1,343 @@
+/* ==========================================================================
+   STYLE CHO BLAKLETTERPRESS (style.css)
+   ========================================================================== */
+
+/* 1. Nhập Font chữ từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap');
+
+/* 2. Khai báo biến (Màu sắc & Spacing) */
+:root {
+    --primary-color: #2c2c2c;     /* Đen nhạt / Màu mực in */
+    --accent-color: #b85d19;      /* Cam đất / Màu nhấn */
+    --bg-color: #faf9f6;          /* Trắng ngà / Màu giấy in */
+    --surface-color: #ffffff;     /* Trắng tinh / Nền card */
+    --text-color: #4a4a4a;        /* Màu xám chữ */
+    --border-color: #e2decb;      /* Viền nhẹ */
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* 3. Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+h1, h2, h3, .site-name {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* 4. Header (Phần đầu trang) */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.site-header .site-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--bg-color);
+}
+
+.site-header .tagline {
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0.5rem 0 2rem;
+    font-family: var(--font-heading);
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: var(--bg-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* 5. Layout tổng thể (Gồm Main và Sidebar) */
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    display: grid;
+    gap: 3rem;
+}
+
+/* Responsive cho Tablet/Desktop */
+@media (min-width: 850px) {
+    .layout {
+        grid-template-columns: 2.5fr 1fr; /* Main rộng hơn Sidebar */
+    }
+}
+
+/* 6. Phần Nội dung chính (Main) */
+main section, main article {
+    margin-bottom: 4rem;
+}
+
+h1, h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+figure {
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+figcaption {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background: var(--surface-color);
+    color: #777;
+    font-style: italic;
+}
+
+#gioi-thieu p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* 7. Grid cho Danh sách Giá trị & Đội ngũ */
+.value-list, .team-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+    .value-list, .team-list {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* Component: Cards (Thẻ) */
+.value-card, .member {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover, .member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.value-card h3, .member h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    border: none;
+}
+
+/* Style riêng cho Đội ngũ */
+.member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 0 0 1px var(--border-color);
+}
+
+.member p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 8. Form Liên hệ */
+.contact-form {
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-form p {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: #fff;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-color);
+}
+
+@media (min-width: 600px) {
+    .contact-form button {
+        width: auto; /* Thu nhỏ nút trên màn hình lớn */
+    }
+}
+
+/* 9. Sidebar */
+.sidebar {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    align-self: start; /* Giữ sidebar không bị kéo giãn theo chiều dọc */
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.recent {
+    margin-bottom: 2rem;
+}
+
+.recent li {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.recent li:last-child {
+    border-bottom: none;
+}
+
+.sidebar a {
+    font-weight: 600;
+}
+
+/* 10. Footer */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 4rem 1.5rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer-cols {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+    .footer-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .footer-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer-cols h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.footer-cols p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
