@@ -1,0 +1,87 @@
+/* Bổ sung cho bài thực hành JavaScript — không sửa css/style.css gốc */
+
+/* ----- Dùng chung ----- */
+#ket-qua {
+	background-color: #fef1bf;
+	border: 1px solid #f0c27e;
+	color: #300302;
+	font: 13px/20px Consolas, "Courier New", monospace;
+	min-height: 60px;
+	margin: 12px 0 30px;
+	padding: 12px;
+	white-space: pre-wrap;
+}
+#contents code {
+	background-color: #ebe0ce;
+	font-family: Consolas, "Courier New", monospace;
+	padding: 0 3px;
+}
+#nut-khoa, #nut-dang, #nut-kiem-tra {
+	background-color: #be841f;
+	border: 0;
+	color: #fffefd;
+	cursor: pointer;
+	font: bold 12px/24px Georgia, "Times New Roman", Times, serif;
+	margin: 8px 0 0;
+	padding: 0 12px;
+}
+
+/* ----- Bài A: thư viện ảnh ----- */
+#gallery ul li.dang-chon {
+	outline: 3px solid #be841f;
+}
+#chu-thich {
+	font-size: 12px;
+	font-style: italic;
+	padding: 6px 0 0;
+	text-align: center;
+}
+
+/* ----- Bài B: lọc tin và đăng tin nhanh ----- */
+.an {
+	display: none !important;
+}
+#list li p {
+	max-height: 48px;
+	overflow: hidden;
+}
+#list li p.day-du {
+	max-height: none;
+}
+#list li button.more {
+	background: none;
+	border: 0;
+	color: #300302;
+	cursor: pointer;
+	float: right;
+	font: italic 14px Georgia, "Times New Roman", Times, serif;
+	padding: 0;
+}
+#list li button.more:hover {
+	color: #097a07;
+}
+#them-tin {
+	background-color: #ebe0ce;
+	margin: 30px 0 12px;
+	padding: 12px;
+}
+#them-tin input, #them-tin textarea {
+	border: 1px solid #c3baaf;
+	box-sizing: border-box;
+	display: block;
+	font: 13px Georgia, "Times New Roman", Times, serif;
+	margin: 6px 0;
+	padding: 4px;
+	width: 100%;
+}
+#bao-loi {
+	color: #b3261e;
+	font-size: 12px;
+	min-height: 18px;
+	padding: 6px 0 0;
+}
+#bo-dem, #khong-thay {
+	font-size: 12px;
+	font-style: italic;
+	padding: 0;
+}

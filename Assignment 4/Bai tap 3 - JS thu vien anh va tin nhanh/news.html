@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bài A – Tin tức từ JSON | Blakletterpress</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/bai-js.css" type="text/css">
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div id="motto">
+				<a href="index.html" class="sitename"><img src="images/blakletterpress.png" height="24" width="142" alt="SiteName"></a>
+				<p>
+					<img src="images/header-text.png" height="14" width="218" alt="Text">
+				</p>
+			</div>
+			<div id="logo">
+				<a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+			</div>
+			<div id="searchbar">
+				<form action="#" method="post">
+					<input id="o-tim-kiem" type="text" value="Enter search query" class="txtfield" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+					<input type="submit" value="Search" class="btn">
+				</form>
+			</div>
+		</div>
+		<div id="contents">
+			<div id="main">
+				<div class="body">
+					<pre id="ket-qua"></pre>
+					
+					<!-- Bổ sung Form Đăng Tin và Bộ Đếm -->
+					<div id="form-dang-tin" style="margin-bottom: 20px;">
+						<input type="text" id="tin-tieu-de" placeholder="Tiêu đề tin" style="width:100%; margin-bottom:10px; padding: 5px;" />
+						<textarea id="tin-noi-dung" placeholder="Nội dung tin" style="width:100%; height:60px; margin-bottom:10px; padding: 5px;"></textarea>
+						<br>
+						<button id="nut-dang" class="btn">Đăng tin nhanh</button>
+						<span id="bao-loi" style="color: red; margin-left: 10px;"></span>
+					</div>
+
+					<p id="bo-dem" style="font-weight: bold; margin-bottom: 10px;">Đang hiển thị 0/0 tin</p>
+					<p id="khong-thay" class="an" style="color: red; margin-bottom: 10px;"></p>
+					
+					<ul id="list">
+					</ul>
+					
+				</div>
+			</div>
+			<div id="sidebar">
+				<div id="navigation">
+					<div>
+						<ul>
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+							<li class="selected">
+								<a href="news.html">News</a>
+							</li>
+							<li>
+								<a href="blog.html">Blog</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="section">
+					<div id="connect">
+						<h2>Connect with us:</h2>
+						<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a> <a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a> <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<p id="footnote">
+					© Copyright © 2011.Company name all rights reserved
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Đã gọi đầy đủ các file JS -->
+	<script src="js/ho-tro.js"></script>
+	<script src="js/bai-a-tin-tuc.js"></script>
+	<script src="js/bai-b-tin-nhanh.js"></script>
+	
+	<!-- Nút chạy bộ kiểm tra Bài B -->
+	<div style="text-align: center; margin: 20px 0;">
+		<button id="nut-kiem-tra" class="btn" style="padding: 10px 20px; font-size: 16px;">Chạy kiểm tra Bài B</button>
+	</div>
+	<script src="js/kiem-tra.js"></script>
+</body>
+</html>

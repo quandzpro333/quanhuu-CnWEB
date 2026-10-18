@@ -1,0 +1,16 @@
+/* Bổ sung cho bài thực hành JavaScript — không sửa css/style.css gốc */
+#ket-qua {
+	background-color: #fef1bf;
+	border: 1px solid #f0c27e;
+	color: #300302;
+	font: 13px/20px Consolas, "Courier New", monospace;
+	min-height: 120px;
+	margin: 12px 0 30px;
+	padding: 12px;
+	white-space: pre-wrap;
+}
+#contents code {
+	background-color: #ebe0ce;
+	font-family: Consolas, "Courier New", monospace;
+	padding: 0 3px;
+}
